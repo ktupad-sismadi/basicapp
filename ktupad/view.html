@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+<title>Ktupad MVC</title>
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="ktupad.css">
+
+</head>
+<body>
+<div id="depan" class="hide"></div>
+
+<div id="belakang" class="main">
+<div id="atas" class="atas1 navbar pDarkColor">
+	<ul style="list-style-type: none; margin:0; left:0; padding: 0;">
+		<li style="float:right"><a><i class="ico-folder"></i></a></li>
+
+		<li tabindex="0" class="sidebar-menu">
+		<i class="ico-burger btn-"></i>
+
+	<ul id="kiri" class="sidebar pColor" >
+	<li><input id="1s" type="checkbox" > <label class="btn-h" for="1s" >Info</label>
+	<ul><li><input id="2s" type="checkbox" > <label class="btn-h" for="2s" >Ktupad-2.0</label></li></ul>
+	</li>
+	</ul>
+	</li>
+	<!-- <li><a class="pLightColor" href="#" id="back"><i class="ico-back"></i></a></li> -->
+	<!-- <li><a class="pLightColor" href="#" id="forward"><i class="ico-forward"></i></a></li> -->
+	</ul>
+</div>
+
+<div id="content" class="content">
+
+<div tabindex="0" class="modal-bts">
+	<div id="float" class="btn-float"><i class="ico-plus"></i></div>
+
+
+
+
+	<div class="depan modal-contents hide">
+
+	<div id="login" class="modal row ">
+		<button id="import"class="btn-close ico-close" name=upload ></button>
+
+		<!-- <i class="btn-close ico-close"></i> -->
+		<h2> Logins </h2>
+		<form >
+		<div> <label>User name</label><br/>	<input id="namas" type="text" name="nama" value=""></div>
+		<div> <label>Password</label><br/><input id="sandis" type="password" name="sandi" value=""></div>
+
+		<div class="clear">
+		<input id="order1" type="hidden" name="order1" value="ORDER BY">
+		 ORDER BY:<select id="fld1" name="sortir" >
+			 <option value="id" >ID</option>
+			 <option value="nama" >Nama</option>
+		</select>
+		</div>
+		</form>
+
+		<form method=post enctype="multipart/form-data" >
+		Pilih File CSV:<input id="afile" type="file" name="afile" >
+		</form>
+
+		<button id="import" class="btn-form" name=upload >Import</button>
+		<button id="signin" class="btn-form">Sign In</button>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+<div id="dashboard" class="dashboard">
+	<div class="row">
+	<div class="l-6 s-6 ">
+	<div class="l-12 s-12 tengah posimg">
+		<div id="chart" class="chart vertical row">
+		<table>
+		<tr>
+			<td><div class="bg1" style="height:100%"> 100 % </div></td>
+			<td><div class="bg2" style="height:80%"> 80 % </div></td>
+			<td><div class="bg3" style="height:10%"> 00 % </div></td>
+		</tr>
+		</table>
+		</div>
+
+	</div>
+	<div class="l-6 s-6 tengah posimg"><a href="#"><img src="logo.svg" alt="Cinque Terre"></a></div>
+	<div class="l-6 s-6 tengah posimg"><a href="#"><img src="logo.svg" alt="Cinque Terre" ></a></div>
+	</div>
+
+	<div class="l-6 s-6 ">
+		<div class="l-12 s-12 tengah posimg">
+
+			<div id="chart" class="chart horizontal row">
+			<table>
+			<tr><td><div class="bg4" style="width:100%"> 100 % </div></td></tr>
+			<tr>	<td><div class="bg5" style="width:80%"> 80 % </div></td></tr>
+			<tr>	<td><div class="bg6" style="width:10%"> 00 % </div></td></tr>
+			</table>
+			</div>
+		</div>
+		<div class="l-6 s-6 tengah posimg"><a href="#"><img src="logo.svg" alt="Cinque Terre"></a></div>
+		<div class="l-6 s-6 tengah posimg"><a href="#"><img src="logo.svg" alt="Cinque Terre" ></a></div>
+	</div>
+</div>
+</div>
+
+<div id="search" class="search row pColor">
+<ul>
+<li class="pTextColor" style="padding: 14px 16px;">Modul</li>
+<li id="caris" tabindex="0" class="onclick-menu" style="float:right" >
+<i class="ico-tridot dropbtn"></i>
+<div id="kanan" class="onclick-menu-content" >
+	<a onclick="'+node.url+'" href="#" >Filter</a>
+	<a onclick="'+node.url+'" href="#" >Export</a>
+	<a onclick="'+node.url+'" href="#" >Import</a>
+	<a onclick="'+node.url+'" href="#" >Print</a>
+</div>
+</li>
+<li id="'+x+'-SearchTxt" style="float:right" ><input type="text" placeholder="Search..." /></li>
+</ul>
+</div>
+
+<div id="table" class="table">
+<table>
+<tr><th class="pColor"><input type="checkbox"></th><th class="pColor">ID</th><th class="pColor">Nama</th></tr>
+<tr><td><input type="checkbox"></td><td>1</td><td>Satu</td></tr>
+<tr><td><input type="checkbox"></td><td>2</td><td>Dua</td></tr>
+</table>
+</div>
+
+<div id="pagination" class="pagination">
+<button id="'+x+'-p" class="btn-form">Prev</button>
+<button id="'+x+'-n" class="btn-form">Next</button>
+<span id="'+x+'-s">Page:1/7</span>
+</div>
+</div>
+<!-- end content -->
+<div id="kanan" class="kanan"> </div>
+<div id="bawah" class="pDarkColor notify">Info</div>
+</div>
+<!-- end main -->
+
+</body>
+</html>
