@@ -2,10 +2,10 @@
   include('ktupad/ktupad.php');
   class app extends mod {
   public $local= array(
-    's' => 'localhost',
-    'u' => 'ktupad',
-    'p' => 'db@ktupad',
-    'n'=> 'demo'
+    's' => 'den1.mysql2.gear.host',
+    'u' => 'basicktupad',
+    'p' => 'Wc9If!80_3TF',
+    'n'=> 'basicktupad'
     );
   }
 
